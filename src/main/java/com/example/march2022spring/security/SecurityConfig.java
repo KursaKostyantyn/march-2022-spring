@@ -52,7 +52,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://localhost:3000"));
         configuration.addAllowedHeader("*");
-        configuration.setAllowedMethods(Arrays.asList(HttpMethod.GET.name(), HttpMethod.HEAD.name(), HttpMethod.POST.name(), HttpMethod.PUT.name(), HttpMethod.PATCH.name(), HttpMethod.DELETE.name()));
+        configuration.setAllowedMethods(Arrays.asList(
+                HttpMethod.GET.name(),
+                HttpMethod.HEAD.name(), HttpMethod.POST.name(),
+                HttpMethod.PUT.name(), HttpMethod.PATCH.name(),
+                HttpMethod.DELETE.name()));
         configuration.addExposedHeader("Authorization");
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
